@@ -8,7 +8,10 @@ import '../models/weather_forecast_daily.dart';
 import '../widgets/temp_view.dart';
 
 class WeatherForecastScreen extends StatefulWidget {
-  const WeatherForecastScreen({super.key, this.locationWeather});
+  const WeatherForecastScreen({
+    Key? key,
+    required this.locationWeather,
+  }) : super(key: key);
 
   final locationWeather;
 

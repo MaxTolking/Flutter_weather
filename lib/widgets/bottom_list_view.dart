@@ -4,7 +4,10 @@ import '../models/weather_forecast_daily.dart';
 import 'forecast_card.dart';
 
 class BottomListView extends StatelessWidget {
-  const BottomListView({super.key, required this.snapshot});
+  const BottomListView({
+    Key? key,
+    required this.snapshot,
+  }) : super(key: key);
 
   final AsyncSnapshot<WeatherForecastApp> snapshot;
 

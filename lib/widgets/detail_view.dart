@@ -5,7 +5,10 @@ import 'package:flutter_example/utilities/forecast_util.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DetailView extends StatelessWidget {
-  const DetailView({Key? key, required this.snapshot}) : super(key: key);
+  const DetailView({
+    Key? key,
+    required this.snapshot,
+  }) : super(key: key);
   final AsyncSnapshot<WeatherForecastApp> snapshot;
 
   @override

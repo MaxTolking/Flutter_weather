@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CityScreen extends StatefulWidget {
-  const CityScreen({super.key});
+  const CityScreen({Key? key}) : super(key: key);
 
   @override
   State<CityScreen> createState() => _CityScreenState();
@@ -19,7 +19,7 @@ class _CityScreenState extends State<CityScreen> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextField(
-                cursorColor: Color.fromARGB(255, 221, 168, 87),
+                cursorColor: const Color.fromARGB(255, 221, 168, 87),
                 style: const TextStyle(
                   color: Colors.blueGrey,
                 ),
@@ -31,24 +31,17 @@ class _CityScreenState extends State<CityScreen> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       borderSide: BorderSide.none),
-                  icon: Icon(
-                    Icons.location_city,
-                    color: Colors.blueGrey,
-                    size: 50,
-                  ),
+                  icon: Icon(Icons.location_city,
+                      color: Colors.blueGrey, size: 50),
                 ),
                 onChanged: (value) => cityName = value,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             TextButton(
               child: const Text(
                 'Посмотреть погоду',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
+                style: TextStyle(fontSize: 30),
               ),
               onPressed: () {
                 Navigator.pop(context, cityName);

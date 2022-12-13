@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_example/models/weather_forecast_daily.dart';
 
 class TempView extends StatelessWidget {
-  const TempView({Key? key, required this.snapshot}) : super(key: key);
+  const TempView({
+    Key? key,
+    required this.snapshot,
+  }) : super(key: key);
 
   final AsyncSnapshot<WeatherForecastApp> snapshot;
 

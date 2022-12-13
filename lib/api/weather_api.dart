@@ -1,14 +1,15 @@
 import 'dart:convert';
 
-import 'package:flutter_example/utilities/location.dart';
-
 import '../models/weather_forecast_daily.dart';
 import 'package:http/http.dart' as http;
 import '../utilities/constants.dart';
+import '../utilities/location.dart';
 
 class WeatherApi {
-  Future<WeatherForecastApp> fetchWeatherForecast(
-      {String? cityName, bool? isCity}) async {
+  Future<WeatherForecastApp> fetchWeatherForecast({
+    String? cityName,
+    bool? isCity,
+  }) async {
     Location location = Location();
     await location.getCuerrentLocation();
 

@@ -4,7 +4,10 @@ import 'package:flutter_example/models/weather_forecast_daily.dart';
 import '../utilities/forecast_util.dart';
 
 class CityView extends StatelessWidget {
-  const CityView({Key? key, required this.snapshot}) : super(key: key);
+  const CityView({
+    Key? key,
+    required this.snapshot,
+  }) : super(key: key);
 
   final AsyncSnapshot<WeatherForecastApp> snapshot;
 
